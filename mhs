@@ -1,0 +1,16 @@
+#!/bin/bash
+
+# Download the start_node.sh script
+wget -O /root/start_node.sh https://raw.githubusercontent.com/przyklad-testowy/mhs/62284297b6c8a739d0962a271c041f8055f1bc01/start_node.sh
+
+# Make the script executable
+chmod +x /root/start_node.sh
+
+# Create the systemd service file
+echo -e "[Unit]\nDescription=Start Node\n\n[Service]\nExecStart=/bin/bash /root/start_node.sh\n\n[Install]\nWantedBy=multi-user.target" | sudo tee /etc/systemd/system/start-node.service
+
+# Reload the systemd daemon
+sudo systemctl daemon-reload
+
+# Enable the service to run at startup
+sudo systemctl enable start-node
