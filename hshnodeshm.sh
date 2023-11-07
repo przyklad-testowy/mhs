@@ -83,5 +83,5 @@ if ! command -v docker &> /dev/null || ! command -v docker-compose &> /dev/null;
 fi
 
 echo "Instalacja węzła walidatora Shardeum jest zakończona! Soczystego AirDropa ;)
-Twoje hasło do serwera to:"
-cat password.txt
+Twoje hasło do serwera to: password"
+
