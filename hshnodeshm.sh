@@ -84,4 +84,4 @@ fi
 
 echo "Instalacja węzła walidatora Shardeum jest zakończona! Soczystego AirDropa ;)
 Twoje hasło do serwera to:"
-Cat password.txt
+cat password.txt
